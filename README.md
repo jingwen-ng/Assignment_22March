@@ -6,8 +6,8 @@ To begin, create any file ending with `.ts` and run it using the VSCode debugger
 
 For console programs requiring user input, the `readline-sync` library is also included. It can be used via
 
-``
+
 import { question } from "readline-sync";
 
 const name = question("What is your name?\n");
-```
+
