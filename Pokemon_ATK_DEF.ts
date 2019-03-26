@@ -18,15 +18,6 @@ function pokemonOptions(array) {
     }
 }
 
-// var myPokemon = 'Charmander';
-// var opponent = 'Pidgey';
-
-// you can use whatever damage formula you like, but the assignment would require:
-// 1. attacker has an attack value
-// 2. defender has a defense value
-// 3. each move (e.g. Tackle, Ember, Shadow Ball) has  a base damage value
-// 4. the final damage formula takes all 3 of the above into account
-
 var myHP = 200;
 var oppHP = 100;
 var finalDamage=0;
@@ -54,13 +45,8 @@ var option = [{
 }
 ];
 
-// You can select from 2 moves, "Tackle" and "Ember"
-// "Tackle" does 5 damage
-// "Ember" does 8 damage
-// You can only pick the move for your pokemon, the wild pidgey will only use Tackle
-// Hardcode each turn
+
 console.log('You have encountered a pokemon battle.');
-//console.log('Your ' + option[0].pokemon + ' starts first');
 
 console.log(option[0].pokemon + ' has ' + myHP + ' HP');
 console.log(option[1].pokemon + ' has ' + oppHP + ' HP');
@@ -87,7 +73,7 @@ while (myHP > 0 && oppHP > 0)
                 
                 console.log(option[0].pokemon + "'s HP is " + myHP );  
                 console.log(option[0].pokemon + " defend with value " + option[0].defend)
-                myHP = myHP + option[0].defend;
+                //myHP = myHP + option[0].defend;
 
                 finalDamage = (option[1].attack-option[0].defend) *  moves[0].damage 
                 myHP = myHP - finalDamage
@@ -108,7 +94,7 @@ while (myHP > 0 && oppHP > 0)
                         console.log(option[1].pokemon + "'s HP is " + oppHP );
 
                         console.log(option[1].pokemon + " defend with value " + option[1].defend)
-                        oppHP = oppHP + option[1].defend;
+                        //oppHP = oppHP + option[1].defend;
         
                         finalDamage = (option[0].attack-option[1].defend) *  moves[0].damage 
                         oppHP = oppHP - finalDamage
@@ -129,7 +115,7 @@ while (myHP > 0 && oppHP > 0)
                     console.log(option[1].pokemon + "'s HP is " + oppHP );
 
                     console.log(option[1].pokemon + " defend with value " + option[1].defend)
-                    oppHP = oppHP + option[1].defend;
+                    //oppHP = oppHP + option[1].defend;
         
                     finalDamage = (option[0].attack-option[1].defend) *  moves[1].damage 
                     oppHP = oppHP - finalDamage
